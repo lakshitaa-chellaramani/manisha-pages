@@ -27,7 +27,7 @@ Get-ChildItem -Path $TempDir -Force | Where-Object { $_.Name -ne '.git' } | ForE
 
 Write-Host "Synchronizing files from $SourceDir to $TempDir (excluding .git and temp-test)..."
 # use robocopy for reliable mirroring and exclusion
-robocopy $SourceDir $TempDir /MIR /XD ".git" "temp-test"
+robocopy $SourceDir $TempDir /MIR /XD ".git" "temp-test" /XF "*.tmp" "*.log"
 
 # now work inside destination repo
 Set-Location $TempDir
