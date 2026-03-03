@@ -1,0 +1,7 @@
+# Ignore temporary and cache files
+*.tmp
+*.node
+mat-debug-*.log
+
+# Keep package manager lockfiles etc if required
+# (add other ignores here as needed)
